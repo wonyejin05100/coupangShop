@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 원예진 - Shopping Cart / like </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/shop.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="nav">
+            <div class="logo">
+                <a href="#"><img src="./images/logo_coupang_w350.png" alt="쿠팡로고"></a>
+            </div>
+            <div id="cart">
+                <!-- <h2>장바구니</h2> -->
+                <!-- button#clear-cart -->
+                <button id="clear-cart" onclick="clearCart()">전체삭제</button>
+                <!-- ul#clear-items -->
+                <ul id="clear-items">
+                    <!-- 삭제처리된 li들이 들어옴 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 제품 -->
+        <div class="product-container">
+            <div class="product">
+                <!-- 제품이미지 -->
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/01.jpg" alt="SSOK3 3in1 맥세이프 무선충전기">
+                <!-- 내용 -->
+                <div class="product-details">
+                    <h2>SSOK3 3in1 맥세이프 무선충전기</h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/02.jpg" alt="ADATA UC300 USB">
+                <div class="product-details">
+                    <h2>ADATA UC300 USB</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/03.jpg" alt="한자리 목이 편한 잠잘오는 경추베개">
+                <div class="product-details">
+                    <h2> 한자리 목이 편한 경추베개 2월 한정 세일 [품절임박] </h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/04.jpg" alt="레드 비트 2KG 3KG 5KG 10KG 알비트 햇 주스용">
+                <div class="product-details">
+                    <h2>레드 비트 2KG 3KG 5KG 10KG 주스용</h2>
+                    <p class="price">
+                        <span class="red">4%</span>
+                        9,930
+                        <span><del>10,400</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/05.jpg" alt="요리용 조림 밑반찬 영양간식 생땅콩">
+                <div class="product-details">
+                    <h2>요리용 조림 밑반찬 영양간식 생땅콩</h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/06.png" alt="샤오미 레드미 워치4 정식 한국판">
+                <div class="product-details">
+                    <h2>샤오미 레드미 워치4 정식 한국판</h2>
+                    <p class="price">
+                        <span class="red">4%</span>
+                        9,930
+                        <span><del>10,400</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/07.jpg" alt="삼성전자 갤럭시 S23 FE 256GB ">
+                <div class="product-details">
+                    <h2>삼성전자 갤럭시 S23 FE 256GB</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/08.jpg" alt="삼성전자 갤럭시 워치6 40mm">
+                <div class="product-details">
+                    <h2>삼성전자 갤럭시 워치6 40mm</h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/09.jpg" alt="폴리폴 맥세이프 충전기 3in1 무선충전기">
+                <div class="product-details">
+                    <h2>폴리폴 3in1 맥세이프 무선충전기</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/10.png" alt="K1 방문 손잡이 심플 그레이, 1세트">
+                <div class="product-details">
+                    <h2>K1 방문 손잡이 심플 그레이, 1세트</h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/11.png" alt="아이폰 15 128GB">
+                <div class="product-details">
+                    <h2>아이폰 15 128GB</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/12.jpg" alt="삼성전자 갤럭시 S23 FE 256GB ">
+                <div class="product-details">
+                    <h2>삼성전자 갤럭시 S23 FE 256GB </h2>
+                    <p class="price">
+                        <span class="red">4%</span>
+                        9,930
+                        <span><del>10,400</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/13.jpg" alt="라운드형 메모리폼 기능성 경추 베개">
+                <div class="product-details">
+                    <h2>라운드형 메모리폼 기능성 경추 베개</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/14.jpg" alt="Apple 정품 아이폰 14 자급제 스타라이트">
+                <div class="product-details">
+                    <h2>Apple 정품 아이폰 14 스타라이트</h2>
+                    <p class="price">
+                        <span class="red">50%</span>
+                        15,000
+                        <span><del>30,000</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <button id="shareButton"><i class="fa-light fa-share-nodes"></i></button>
+                <img src="./images/15.jpg" alt="삼성전자 갤럭시 Z 폴드5 256GB">
+                <div class="product-details">
+                    <h2>삼성전자 갤럭시 Z 폴드5 256GB</h2>
+                    <p class="price">
+                        <span class="red">21%</span>
+                        62,010
+                        <span><del>78,900</del></span>
+                    </p>
+                    <!-- 장바구니,좋아요 버튼 -->
+                    <button onClick="addToCart(this)"> 장바구니 추가 </button>
+                    <button class="like-button" onclick="toggleLike(this)"> 좋아요 </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const shareButtons = document.querySelectorAll('#shareButton');
+        shareButtons.forEach(button => {
+            // .forEach - 각 요소에 접근함
+            button.addEventListener('click', function(){
+                share();
+            });
+        });
+        // 공유함수
+        function share() {
+            alert("링크가 복사되었습니다 : http://www.cupang.com");
+        }
+    </script>
+
+
+</body>
+
+</html>
